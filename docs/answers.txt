@@ -1,0 +1,95 @@
+/* Name: Kyle Cody
+ * CEN 4020-01
+ * Assignment #1 - Git and Object Oriented Programming warm up
+ * answers.txt contains the answers to the questions found in 
+ * step 3.E for Assignment#1.
+ */
+
+A) cody@linprog4.cs.fsu.edu:Assignment#1/Assignment1/docs>git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': N0l3ProjDev267
+Password for 'https://N0l3ProjDev267@github.com':
+Counting objects: 10, done.
+Delta compression using up to 56 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 953 bytes | 0 bytes/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/N0l3ProjDev267/Assignment1.git
+   3d373c9..2a19863  master -> master
+
+B) There currently are 5 commits that have been done to the repository.
+
+cody@linprog7.cs.fsu.edu:~/CEN4020/Assignment#1/Assignment1>git shortlog
+Javier Escobar-Avila (2):
+      First version of the RoleGame prototype.
+      Main method changed
+
+Kyle David Cody (3):
+      Updated Repository Information files
+      Updated status information
+      Creation of answers.txt file
+ 
+C) The .gitignore file was last modified on Thursday, January 10th by Javier Escobar-Avila.
+
+cody@linprog7.cs.fsu.edu:~/CEN4020/Assignment#1/Assignment1>git log .gitignore
+commit 69281a35557fd1226cbfc11428068c5d8bcf8466
+Author: Javier Escobar-Avila <jrescobara@gmail.com>
+Date:   Thu Jan 10 16:45:38 2019 -0500
+
+    First version of the RoleGame prototype.
+    
+    The framework to consume weapons starts with the WeaponFactory. Two weapons 
+    
+    We expect more weapons to be created soon...
+
+D) Branches are used in a Git repository to enable independent lines of development within a repository. 
+Branches are also used in a Git repository to isolate and implement particular features within a project 
+and then merge the changes into the original line of development.
+
+E) The difference between git log and git status is that git log shows information about the commit logs 
+whereas git status shows the working tree status. 
+Git status displays path differences between the index file, 
+current HEAD commit and those in the working tree that aren't tracked by Git. 
+
+F) git log --follow Weapon.h
+
+G) git log --grep="file"
+
+H) According to the textbook, Inheritance is an OOP technique which enables new data types to be defined as an extension of an already defined type;
+inheriting all the attributes of the base class. 
+
+According to the textbook, Polymorphism is an OOP technique that uses the base class-derived class relationship created with Inheritance 
+and allows a call to a member function to cause a different function to be executed depending on the type of object invoking the call. 
+In other words, a method that can be applied to objects of different classes. 
+
+According to the textbook, Encapsulation is an OOP technique that refers to binding together the data and methods that manipulate the data into one unit, 
+keeping them secure from outside corruption or misuse by the user.
+
+************************************************
+Git Commands, Workflow, and Resources Questions:
+************************************************
+I) The main difference between the "Dictator and Lieutenants" workflow and the "Integration Management" workflow is that 
+the dictator delegates work to two Lieutenants who are in charge of different parts of the repository. In the "Integration Managagement"
+workflow, each developer has write access to their own repository and can read everyone else's therefore creating a more collaborative 
+development experience by sending requests to the repository maintainer to merge any changes made. 
+The "Dictator and Lieutenants" workflow is typically used for projects on a much larger scale and magnitude than those  
+developed using the "Integration Management" workflow.
+
+J) A team of 100 developers would benefit more by following the "Dictator and Lieutenants" workflow because only one person, the dictator, merges changes and solves any conflicts. 
+On the other hand, the "Centralized" workflow requires all developers to pull any changes and resolve conflicts before pushing to the central repository. 
+One person in charge is less chaotic and more efficiently allows the project manager to delegate work than having 100 people all with the same level of privileges. 
+
