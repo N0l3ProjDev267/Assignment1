@@ -1,1 +1,6 @@
-
+cody@linprog4.cs.fsu.edu:~/CEN4020/Assignment#1/Assignment1>git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+nothing to commit, working directory clean
