@@ -6,6 +6,15 @@
  * Created on September 25, 2017, 3:19 PM
  */
 
+
+/*
+ * Editor: Kyle Cody
+ * CEN 4020-01 
+ * Assignment 1 - Git and Object Oriented Programming Warm Up
+ * main.cpp contains the driver program that prints the behavior
+ * of all weapon types created.      
+ */
+
 #include <cstdlib>
 #include <iostream>
 #include "Weapon.h"
@@ -28,7 +37,8 @@ void simulateWeapon(Weapon * weapon, double armor) {
  * 
  */
 int main(int argc, char** argv) {
-
+    srand(0);	
+  
     double armor = 29;
 
     Weapon *weapon = WeaponFactory::getInstance()->getWeapon("sword");
@@ -36,6 +46,18 @@ int main(int argc, char** argv) {
     delete(weapon);
 
     weapon = WeaponFactory::getInstance()->getWeapon("spear");
+    simulateWeapon(weapon, armor);
+    delete(weapon);
+
+    weapon = WeaponFactory::getInstance()->getWeapon("hammer");
+    simulateWeapon(weapon, armor);
+    delete(weapon);
+
+    weapon = WeaponFactory::getInstance()->getWeapon("random");
+    simulateWeapon(weapon, armor);
+    delete(weapon);
+
+    weapon = WeaponFactory::getInstance()->getWeapon("axe");
     simulateWeapon(weapon, armor);
     delete(weapon);
 
