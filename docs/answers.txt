@@ -56,7 +56,8 @@ Date:   Thu Jan 10 16:45:38 2019 -0500
     
     We expect more weapons to be created soon...
 
-D) Branches are used in a Git repository to enable independent lines of development within a repository. 
+D) Branches are used in a Git repository as a way to facilitate version control and development without changing the  
+master or origin branch. 
 Branches are also used in a Git repository to isolate and implement particular features within a project 
 and then merge the changes into the original line of development.
 
@@ -83,13 +84,30 @@ keeping them secure from outside corruption or misuse by the user.
 Git Commands, Workflow, and Resources Questions:
 ************************************************
 I) The main difference between the "Dictator and Lieutenants" workflow and the "Integration Management" workflow is that 
-the dictator delegates work to two Lieutenants who are in charge of different parts of the repository. In the "Integration Managagement"
-workflow, each developer has write access to their own repository and can read everyone else's therefore creating a more collaborative 
-development experience by sending requests to the repository maintainer to merge any changes made. 
-The "Dictator and Lieutenants" workflow is typically used for projects on a much larger scale and magnitude than those  
+the Dictator delegates work to the Lieutenants who are in charge of different parts of the repository. The Lieutenants merge the Developers branches to their master branch and then
+the Dictator merges the Lieutenants master branches into their own master branch.
+
+In the "Integration Managagement" workflow, each developer has write access to their own publically cloned repository and can read everyone else's therefore creating a more collaborative 
+development experience by sending requests to the repository maintainer to pull any changes made. The maintainer can add the changes remotely, test them locally, merge and push to their own
+repositories. The "Dictator and Lieutenants" workflow is typically used for projects on a much larger scale and magnitude than those  
 developed using the "Integration Management" workflow.
 
-J) A team of 100 developers would benefit more by following the "Dictator and Lieutenants" workflow because only one person, the dictator, merges changes and solves any conflicts. 
-On the other hand, the "Centralized" workflow requires all developers to pull any changes and resolve conflicts before pushing to the central repository. 
-One person in charge is less chaotic and more efficiently allows the project manager to delegate work than having 100 people all with the same level of privileges. 
+J) A team of 100 developers would benefit more by following the "Dictator and Lieutenants" workflow because only one person, the dictator, merges changes and solves any conflicts before
+pushing the final product to the repository. 
+On the other hand, the "Centralized" workflow requires all developers to pull any changes and resolve conflicts before pushing to the shared, central repository. 
+One person in charge is less chaotic and enables more efficient development to occur because the project manager can 
+delegate work and make decisions instead of having 100 people conflicted over which implementation to add, commit and merge to the repository. 
 
+*********************************
+RoleGame OOP Principles Question:
+*********************************
+
+Yes, the RoleGame prototype is using both polymorphism and encapsulation. 
+
+With regards to polymorphism, the destructor and double hit(double armor) methods for each class are polymorphic in nature because they are declared as virtual. 
+Virtual functions allow the compiler to determine at run-time which function to call depending on the type of object making the call, thus one method such as, 
+the hit function for example, can have multiple interpretations based on how it is implemented in the derived classes. The object making the call determines
+which implementation is used by the compiler. 
+
+With regards to encapsulation, both the data variables and methods that manipulate them are contained within one unit, C++ classes. 
+This has been supplemented with the use of the access modifiers, public and private, to hide the data and consolidate everything into one, concise unit. 
