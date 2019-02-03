@@ -20,12 +20,12 @@
 class SimpleHammer : public Weapon {
 public:
 
-	SimpleHammer() : Weapon("Simple hammer", 25.0) //Calls Weapon(name, hitpoints) constructor with values Simple Hammer and 25.0 for hitpoints
+	SimpleHammer() : Weapon("Simple hammer", 25.0) //Calls Weapon(name, hitpoints) constructor with values Simple hammer and 25.0 for hitpoints
 	{
 	}
 
-	virtual ~SimpleHammer() {};
+	virtual ~SimpleHammer() {};		//Destructor
 
-	virtual double hit(double armor);
+	virtual double hit(double armor);	//Simulates a hit
 };
 #endif //SIMPLEHAMMER_H

@@ -5,6 +5,7 @@
  * Created on September 25, 2017, 3:25 PM
  */
 #include "Weapon.h"
+#include <iostream>
 
 #ifndef WEAPONFACTORY_H
 #define WEAPONFACTORY_H

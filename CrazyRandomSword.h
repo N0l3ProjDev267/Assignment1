@@ -2,7 +2,9 @@
  * CEN 4020-01 
  * Assignment 1 - Git and Object Oriented Programming Warm Up
  * CrazyRandomSword.h contains the declarations of member functions
- * for the weapon type: Crazy Random Sword.      
+ * for the weapon type: Crazy Random Sword. 
+ * Source: Code for random number generation within a defined range
+ * obtained from StackOverflow.com     
  */
 
 #include <string>
@@ -21,12 +23,12 @@
 
 class CrazyRandomSword : public Weapon {
 public:
-
-	CrazyRandomSword() : Weapon("Crazy random sword", rand()% 100 + 7){ //Calls Weapon(name, hitpoints) constructor with values Crazy Random Sword and random int between 7-100.
+	/* See Source */
+	CrazyRandomSword() : Weapon("Crazy random sword", 7+rand()%((100+1)-7)){ //Calls Weapon(name, hitpoints) constructor with values Crazy Random Sword and random int between 7-100.
 	}
-	virtual ~CrazyRandomSword() {};
+	virtual ~CrazyRandomSword() {};		//Destructor
 
-	virtual double hit(double armor);
+	virtual double hit(double armor);	//Simulates a hit
 };
 
 #endif //CRAZYRANDOMSWORD_H

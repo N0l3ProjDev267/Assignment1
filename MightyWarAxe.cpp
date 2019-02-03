@@ -8,9 +8,13 @@
 #include "MightyWarAxe.h"
 
 double MightyWarAxe::hit(double armor){
-	if (armor > 50){armor/=2;}
+	double reducedarmor = 0;	//Stores amount of armor ignored
+	if (armor > 25){reducedarmor = armor/ 2;}	//New armor value
 
-	double damage = hitPoints - armor;
+	//Total amount of damage
+	double damage = ((hitPoints * 2) - reducedarmor);
+
+	if (armor < 25 ) {damage = hitPoints - armor;}
 	if (damage < 0){
 		return 0;
 	}
